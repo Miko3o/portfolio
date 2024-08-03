@@ -1,0 +1,93 @@
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+
+
+.profileBase {
+    width: 60%;
+    height: 70%;
+    background-color: #e4ca56;
+    color: rgb(104, 148, 3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: spinAppear 1.5s forwards;
+    transition: transform 1s ease;
+}
+
+.card-move-up {
+    transform: translateY(-200px);
+}
+
+.card-move-down {
+    transform: translateY(200px);
+}
+
+
+.profileDescription {
+    margin: 20px;
+    width: 80%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.profileDescription h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    animation: appear 4s forwards;
+}
+
+.profileDescription p {
+    font-size: 1.5rem;
+    margin: 0;
+    animation: appear 4s forwards;
+}
+
+.profilePic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: appear 4s forwards;
+}
+
+.pic {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+@keyframes spinAppear {
+    from {
+        opacity: 0;
+        transform: rotate(-6deg) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(2deg) scale(1);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
