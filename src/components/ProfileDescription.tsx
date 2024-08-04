@@ -2,22 +2,7 @@ import './ProfileDescription.css'
 
 export const ProfileDescription = () => {
 
-  const onDocumentMouseWheel = (event: WheelEvent) => {
-    const card = document.getElementById('profileBase');
-    if (card) {
-      //check if card already has movement class
-      if (!card.classList.contains('card-move-up') && !card.classList.contains('card-move-down')) {
-        //if scroll down
-        if (event.deltaY > 0) {
-          card.classList.add('card-move-down');
-        } else {
-          card.classList.add('card-move-up');
-        }
-      }
-    }
-  }
 
-  window.addEventListener('wheel', onDocumentMouseWheel);
 
 
 

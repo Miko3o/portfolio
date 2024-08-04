@@ -1,7 +1,9 @@
 
+import { useState } from 'react';
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/Addons.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import './ThreeJsCanvas.css'
 
 
 export const ThreeJsCanvas = () => {
@@ -74,7 +76,8 @@ export const ThreeJsCanvas = () => {
     })
 
     let targetPosition: THREE.Vector3 | null = null;
-    const moveSpeed = 0.05;
+
+    const moveSpeed = 0.1;
 
     const animate = (time: number) => {
 
@@ -89,7 +92,7 @@ export const ThreeJsCanvas = () => {
 
             //if box is close enough to target position, stop moving
             const distance = box.position.distanceTo(targetPosition);
-            if (distance < 0.01) {
+            if (distance < 0.1) {
                 targetPosition = null; //stop moving when close enough
             }
         }
@@ -104,9 +107,9 @@ export const ThreeJsCanvas = () => {
     const onDocumentMouseWheel = (event: any) => {
         if (!targetPosition) {
             //target position
-            targetPosition = event.deltaY > 0
-                ? new THREE.Vector3(2, 2, 2)
-                : new THREE.Vector3(-2, -2, -2);
+            targetPosition = event.deltaY < 0
+                ? new THREE.Vector3(10, 5, -5)
+                : new THREE.Vector3(0, 0, 4);
         }
     }
 
@@ -119,7 +122,7 @@ export const ThreeJsCanvas = () => {
     })
 
     return (
-        <div>
+        <div className='body'>
         </div>
     );
 }
