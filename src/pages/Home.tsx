@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-import { ThreeJsCanvas } from "../components/ThreeJsCanvas";
 import { ProfileDescription } from "../components/ProfileDescription";
 import { Projects } from "../components/Projects";
 
