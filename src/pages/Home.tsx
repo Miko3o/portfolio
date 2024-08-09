@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import { ProfileDescription } from "../components/ProfileDescription";
 import { Projects } from "../components/Projects";
