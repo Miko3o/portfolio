@@ -14,9 +14,9 @@ export const ProjectSlot = (props: ProjectProps) => {
     return (
         <div className="project-slot">
             <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            <p>{project.technologies}</p>
-            <p>{project.github}</p>
+            <p className='description'>{project.description}</p>
+            <p className='technologies'>{project.technologies}</p>
+            <a className='github' href={project.github}>GitHub Link</a>
         </div>
     )
 }
