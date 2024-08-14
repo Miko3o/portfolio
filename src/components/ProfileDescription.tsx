@@ -1,3 +1,4 @@
+
 import './ProfileDescription.css'
 
 export const ProfileDescription = () => {
@@ -12,11 +13,11 @@ export const ProfileDescription = () => {
         <div className="profileDescription">
           <h1>Hi I'm Mario Munoz</h1>
           <p>
-            I am an aspiring frontend web developer.
+            Frontend Web Developer
           </p>
         </div>
         <div className="profilePic">
-          <img className='pic' src="src\images\placeholder_self.jpg" alt="profile" />
+          <img className='pic' src="/images/pic2.jpg" alt="profile" />
         </div>
       </div>
     </div>
